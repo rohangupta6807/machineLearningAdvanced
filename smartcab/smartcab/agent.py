@@ -100,7 +100,11 @@ class LearningAgent(Agent):
        
         if self.learning:
         	if state not in self.Q:
-        		self.Q[state]= { None:0.0 , 'forward':0.0 , 'left':0.0 , 'right':0.0 }
+        		self.Q[state]= { None:0.0 ,
+                                'forward':0.0 ,
+                                'left':0.0 ,
+                                'right':0.0 
+                               }
         return
 
 
@@ -144,7 +148,9 @@ class LearningAgent(Agent):
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
 
         if self.learning:
-        	self.Q[state][action] =self.alpha*reward+(1-self.alpha)*self.Q[state][action]
+            x=reward
+            v=self.Q[state][action]
+        	self.Q[state][action] =self.alpha*x+(1-self.alpha)*v
 
         return
 
