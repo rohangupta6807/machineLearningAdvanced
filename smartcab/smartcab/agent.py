@@ -100,7 +100,7 @@ class LearningAgent(Agent):
        
         if self.learning:
         	if state not in self.Q:
-        		self.Q[state]={ None:0.0,'forward':0.0,'left':0.0,'right':0.0}
+        		self.Q[state]= { None:0.0 , 'forward':0.0 , 'left':0.0 , 'right':0.0 }
         return
 
 
