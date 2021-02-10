@@ -1,2 +1,2 @@
-# machineLearningAdvanced
-Udacity nanodegree machine learning advanced
+# machineLearning
+Udacity nanodegree machine learning
